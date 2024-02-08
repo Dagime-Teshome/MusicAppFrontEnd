@@ -1,0 +1,142 @@
+.filterFormClass {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelClass {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.headingClass {
+    margin: 0 0 3rem 1rem;
+    min-width: 0;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.toolbarClass {
+    display: flex;
+    margin: 2rem 0 2rem 0;
+    gap: 5rem;
+}
+
+
+.floatingButton {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    bottom: -12%;
+    border-radius: 50%;
+    border: none;
+    font-size: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    animation-delay: 2s;
+    font-size: xx-large;
+}
+
+
+
+.floatingButton:hover {
+    background-color: #e0e0e0;
+}
+
+.bannerClass {
+    position: relative;
+    height: 250px;
+    background-color: #56CBF9;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    color: white;
+}
+
+
+.search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.addButton {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    align-self: end;
+    margin-left: auto;
+}
+
+.addButton:hover {
+    color: #37a0dd;
+    border-color: #37a0dd;
+}
+
+.genre-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.search-input:focus,
+.genre-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    .toolbarClass {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterFormClass {
+        margin-bottom: 16px;
+    }
+
+    .labelClass {
+        margin-bottom: 4px;
+    }
+
+}
+
+@keyframes floatingAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        /* Move button up */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floatingButton {
+    animation: floatingAnimation 4s ease-in-out infinite;
+    /* Adjust duration and timing */
+}

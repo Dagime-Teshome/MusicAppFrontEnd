@@ -1,0 +1,71 @@
+.closeButtonBtm {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    align-self: end;
+    margin-left: auto;
+}
+
+.closeButtonBtm:hover {
+    color: grey;
+    border-color: #37a0dd;
+}
+
+.dialogClass {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    color: #f00;
+}
+
+
+.confirm-dialog-button {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    align-self: end;
+}
+
+.confirm-dialog-delete-button.confirm-dialog-button {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.confirm-dialog-cancel-button.confirm-dialog-button {
+    background-color: #cccccc;
+    color: #333333;
+    margin-right: 10px;
+    /* Add margin between buttons */
+}
+
+.confirm-dialog-button:hover {
+    filter: brightness(0.9);
+    /* Add hover effect */
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 5px;
+}

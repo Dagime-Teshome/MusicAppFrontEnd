@@ -1,0 +1,197 @@
+.tbl-content {
+    max-height: 60vh;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-y: auto;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding-left: 5rem;
+}
+
+.addSongDialog {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    align-self: end;
+    margin-left: auto;
+}
+
+.addSongDialog:hover {
+    color: #37a0dd;
+    border-color: #37a0dd;
+}
+
+.modern-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.modern-table thead th {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    text-align: left;
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+}
+
+.modern-table tbody td {
+    padding: 10px;
+    color: #555;
+}
+
+.songContainer {
+    width: 100%;
+}
+
+.songListItemCard {
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.songListItemContent {
+    margin-bottom: 12px;
+}
+
+.songListItemActions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+}
+
+.actionButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.actionButton:hover {
+    color: #007bff;
+}
+
+.actionButton:hover.deleteButton {
+    color: red;
+}
+
+.actionButton:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.actionButton:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.addSongForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.addSongForm input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addSongForm input:valid {
+    border-color: green;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input:invalid {
+    border-color: red;
+}
+
+.formGroup input:focus:invalid {
+    border-color: #dc3545;
+}
+
+.formGroup .validation {
+    color: red;
+    font-size: 0.8rem;
+}
+
+
+.songListItemActions button:hover {
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .modern-table {
+        display: none;
+    }
+
+    .modern-list {
+        padding: 0;
+    }
+
+    .actionButton {
+        font-size: 16px;
+    }
+}
+
+/* Hide the list on large screens */
+@media only screen and (min-width: 769px) {
+    .modern-list {
+        display: none;
+    }
+}
