@@ -1,5 +1,5 @@
 import "./App.css"
-import { SongComponent } from "./features/songs/songlistcomponent"
+import { SongComponent } from "./features/songs/SongListComponent"
 
 const App = () => {
   return (

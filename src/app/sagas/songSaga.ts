@@ -1,4 +1,10 @@
-import { LoadSongs, getSongs } from "../../features/songs/songSlice"
+import {
+  LoadSongs,
+  getSongs,
+  updateSong,
+  deleteSong,
+  createSong,
+} from "../../features/songs/songSlice"
 import { put, call, takeEvery } from "redux-saga/effects"
 import songsService from "../../services/songsApi"
 import { getStats } from "../../features/stats/statslice"
@@ -13,7 +19,7 @@ function* fetchSongs(): any {
     console.error(error)
   }
 }
-function* createSong(action: any): any {
+function* createSongSaga(action: any): any {
   try {
     yield call(() => songsService.createSong(action.payload))
     yield put(getSongs())
@@ -23,11 +29,11 @@ function* createSong(action: any): any {
     console.error(error)
   }
 }
-function* updateSong(action: any): any {
+function* updateSongSaga(action: any): any {
   try {
     const id = action.payload.id
-    const updateObject = action.payload.data
-    yield call(() => songsService.updateSong(id, updateObject))
+    const data = action.payload.data
+    yield call(() => songsService.updateSong(id, data))
     yield put(getSongs())
     yield put(getStats())
     yield put(genreAction())
@@ -35,7 +41,7 @@ function* updateSong(action: any): any {
     console.error(error)
   }
 }
-function* deleteSong(action: any): any {
+function* deleteSongSaga(action: any): any {
   try {
     yield call(() => {
       songsService.deleteSong(action.payload.id)
@@ -52,11 +58,11 @@ export function* watchFetchSongAsync(): SagaIterator {
   yield takeEvery("song/getSongs", fetchSongs)
 }
 export function* watchUpdateSongAsync(): SagaIterator {
-  yield takeEvery("song/updateSong", updateSong)
+  yield takeEvery("song/updateSong", updateSongSaga)
 }
 export function* watchCreateSongAsync(): SagaIterator {
-  yield takeEvery("song/createSong", createSong)
+  yield takeEvery("song/createSong", createSongSaga)
 }
 export function* watchDeleteSongAsync(): SagaIterator {
-  yield takeEvery("song/deleteSong", deleteSong)
+  yield takeEvery("song/deleteSong", deleteSongSaga)
 }

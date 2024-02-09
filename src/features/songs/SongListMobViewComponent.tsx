@@ -19,7 +19,6 @@ const SongItemMobile: React.FC<SongItemMobileProps> = ({ song }) => {
   const [deleteData, setDeleteData] = useState<Song | undefined>()
 
   const handleDeleteClick = (data: Song) => {
-    console.log("delete", data)
     setDeleteData(data)
     setOpenDeleteDialog(true)
   }
@@ -33,7 +32,6 @@ const SongItemMobile: React.FC<SongItemMobileProps> = ({ song }) => {
   }
 
   const handleUpdate = (data: Song) => {
-    console.log("update", data)
     setEditData(data)
     setOpenDialog(true)
   }

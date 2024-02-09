@@ -29,11 +29,12 @@ export const songSlice = createSlice({
   },
   selectors: {
     songs: songs => songs.songs,
+    isLoading: songs => songs.isLoading,
   },
 })
 
 export const { getSongs, updateSong, createSong, deleteSong, LoadSongs } =
   songSlice.actions
-export const { songs } = songSlice.selectors
+export const { songs, isLoading } = songSlice.selectors
 
 export default songSlice.reducer

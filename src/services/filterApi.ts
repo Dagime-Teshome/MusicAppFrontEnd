@@ -5,7 +5,6 @@ const baseUrl = "/api/filter"
 
 const filterSongs = async (searchTerms: SearchType) => {
   const response = await axios.post(baseUrl, searchTerms)
-  console.log(response.data)
   return response.data
 }
 const getGenres = async () => {

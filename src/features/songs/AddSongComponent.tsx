@@ -27,6 +27,7 @@ const AddSongDialog: React.FC<AddSongDialogProps> = ({
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     handleSubmit(formData)
+
     setFormData({
       id: "",
       title: "",

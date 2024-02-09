@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChartPie, faPlus } from "@fortawesome/free-solid-svg-icons"
 import "./toolbar.css"
 import Modal from "../../shared/ModalComponent"
-import { Stats } from "../stats/statscomponent"
+import { Stats } from "../stats/StatsComponent"
 
 const Search: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -49,6 +49,7 @@ const Search: React.FC = () => {
 
   const onDialogSubmit = (formData: Song) => {
     dispatch(createSong(formData))
+    setOpenDialog(false)
   }
   return (
     <>
@@ -89,7 +90,6 @@ const Search: React.FC = () => {
             ))}
           </select>
         </div>
-        {/* <button onClick={handleSearch}>Search</button> */}
         <button
           className="addButton"
           onClick={() => {

@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { getStats, stat } from "./statslice"
 
-export const Stats = () => {
+export const Stats: React.FC = () => {
   const labelMap: Record<string, string> = {
     totalSongs: "Total Songs",
     totalArtists: "Total Artists",

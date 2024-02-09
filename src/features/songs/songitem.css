@@ -143,18 +143,7 @@
     margin-bottom: 0.5rem;
 }
 
-.formGroup input:invalid {
-    border-color: red;
-}
 
-.formGroup input:focus:invalid {
-    border-color: #dc3545;
-}
-
-.formGroup .validation {
-    color: red;
-    font-size: 0.8rem;
-}
 
 
 .songListItemActions button:hover {

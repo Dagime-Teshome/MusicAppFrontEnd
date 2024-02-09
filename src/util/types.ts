@@ -24,6 +24,11 @@ export interface SongItemProps {
   onEdit: (formData: Song) => void
   onDelete: (FormData: Song) => void
 }
+export interface ToastState {
+  success: boolean
+  error: boolean
+  message: string | null
+}
 
 export interface songState {
   songs: Song[]
